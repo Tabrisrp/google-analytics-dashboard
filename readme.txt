@@ -60,7 +60,8 @@ http://sourceforge.net/projects/ister4framework/
 == Change Log ==
 
 = 2.1 =
-
+* Made the entire plugin i18n compatible.
+* Replace deprecated `update_usermeta` and `get_usermeta` calls.
 * Several security fixes.
 
 = 2.0.5 =
