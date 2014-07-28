@@ -3,9 +3,9 @@
 Plugin Name: Google Analytics Dashboard
 Plugin URI: http://www.ioncannon.net/projects/google-analytics-dashboard-wordpress-widget/
 Description: Google Analytics graph integration.
-Version: 2.0.5
+Version: 2.1
 Author: Team Yoast & Carson McDonald
-Author URI: http://yoast.com/
+Author URI: https://yoast.com/
 */
 /*
 		Copyright 2009  Carson McDonald  (carson@ioncannon.net)
