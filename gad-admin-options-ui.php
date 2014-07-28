@@ -71,6 +71,9 @@ class GADAdminOptionsUI {
 			?>
 
 			<form action="" method="post">
+				<?php
+				wp_nonce_field( 'update_ga_dashboard_' . get_current_user_id() );
+				?>
 
 				<table class="form-table">
 					<tr valign="top">
@@ -83,7 +86,7 @@ class GADAdminOptionsUI {
 							} else {
 								echo '<select id="ga_account_id" name="ga_account_id">';
 								foreach ( $account_hash as $account_id => $account_name ) {
-									echo '<option value="' . $account_id . '" ' . ( $current_account_id == $account_id ? 'selected' : '' ) . '>' . $account_name . '</option>';
+									echo '<option value="' . esc_attr( $account_id ) . '" ' . ( $current_account_id == $account_id ? 'selected' : '' ) . '>' . esc_attr( $account_name ) . '</option>';
 								}
 								echo '</select>';
 							}
@@ -138,7 +141,7 @@ class GADAdminOptionsUI {
 								<label for="ga_cache_timeout"><?php _e( 'Cache Timeout (seconds)', 'google-analytics-dashboard' ); ?></label>
 							</th>
 							<td>
-								<input value="<?php echo( get_option( 'gad_cache_timeout' ) !== false ? get_option( 'gad_cache_timeout' ) : '60' ); ?>" name="ga_cache_timeout" id="ga_cache_timeout" />
+								<input value="<?php echo esc_attr( get_option( 'gad_cache_timeout' ) !== false ? get_option( 'gad_cache_timeout' ) : '60' ); ?>" name="ga_cache_timeout" id="ga_cache_timeout" />
 							</td>
 						</tr>
 					<?php
@@ -161,26 +164,26 @@ class GADAdminOptionsUI {
 					<tr valign="top">
 						<th scope="row">
 							<label for="ga_goal_one"><?php _e( 'Goal #1 Label', 'google-analytics-dashboard' ); ?></label></th>
-						<td><input value="<?php echo get_option( 'gad_goal_one' ); ?>" name="ga_goal_one" id="ga_goal_one" /></td>
+						<td><input value="<?php echo esc_attr( get_option( 'gad_goal_one' ) ); ?>" name="ga_goal_one" id="ga_goal_one" /></td>
 					</tr>
 
 					<tr valign="top">
 						<th scope="row">
 							<label for="ga_goal_two"><?php _e( 'Goal #2 Label', 'google-analytics-dashboard' ); ?></label></th>
-						<td><input value="<?php echo get_option( 'gad_goal_two' ); ?>" name="ga_goal_two" id="ga_goal_two" /></td>
+						<td><input value="<?php echo esc_attr( get_option( 'gad_goal_two' ) ); ?>" name="ga_goal_two" id="ga_goal_two" /></td>
 					</tr>
 
 					<tr valign="top">
 						<th scope="row">
 							<label for="ga_goal_three"><?php _e( 'Goal #3 Label', 'google-analytics-dashboard' ); ?></label></th>
-						<td><input value="<?php echo get_option( 'gad_goal_three' ); ?>" name="ga_goal_three" id="ga_goal_three" />
+						<td><input value="<?php echo esc_attr( get_option( 'gad_goal_three' ) ); ?>" name="ga_goal_three" id="ga_goal_three" />
 						</td>
 					</tr>
 
 					<tr valign="top">
 						<th scope="row">
 							<label for="ga_goal_four"><?php _e( 'Goal #4 Label', 'google-analytics-dashboard' ); ?></label></th>
-						<td><input value="<?php echo get_option( 'gad_goal_four' ); ?>" name="ga_goal_four" id="ga_goal_four" />
+						<td><input value="<?php echo esc_attr( get_option( 'gad_goal_four' ) ); ?>" name="ga_goal_four" id="ga_goal_four" />
 						</td>
 					</tr>
 

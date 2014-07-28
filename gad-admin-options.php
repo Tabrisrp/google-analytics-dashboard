@@ -30,6 +30,9 @@ class GADAdminOptions {
 	}
 
 	function __construct() {
+		if( !is_admin() ){
+			die( "Please open this page in the Admin panel only." );
+		}
 	}
 
 	function register_for_actions_and_filters() {
@@ -44,13 +47,13 @@ class GADAdminOptions {
 
 		switch ( $_POST['pi'] ) {
 			case 'base-stats':
-				update_usermeta( $current_user->ID, 'gad_bs_toggle', $_POST['pv'] );
+				update_usermeta( $current_user->ID, 'gad_bs_toggle', sanitize_text_field( $_POST['pv'] ) );
 				break;
 			case 'goal-stats':
-				update_usermeta( $current_user->ID, 'gad_gs_toggle', $_POST['pv'] );
+				update_usermeta( $current_user->ID, 'gad_gs_toggle', sanitize_text_field( $_POST['pv'] ) );
 				break;
 			case 'extended-stats':
-				update_usermeta( $current_user->ID, 'gad_es_toggle', $_POST['pv'] );
+				update_usermeta( $current_user->ID, 'gad_es_toggle', sanitize_text_field( $_POST['pv'] ) );
 				break;
 			default:
 				die( "alert('Unknown option.')" );
@@ -87,6 +90,11 @@ class GADAdminOptions {
 				die( __( 'Cheatin&#8217; uh?' ) );
 			}
 
+			// Verify the Nonce of the options form
+			if( !wp_verify_nonce( $_REQUEST['_wpnonce'], 'update_ga_dashboard_' . get_current_user_id() ) ){
+				die( __( 'Cheatin&#8217; uh?' ) );
+			}
+
 			@SimpleFileCache::clearCache();
 
 			if ( isset( $_POST['ga_forget_pass'] ) ) {
@@ -113,7 +121,7 @@ class GADAdminOptions {
 			}
 
 			delete_option( 'gad_account_id' );
-			add_option( 'gad_account_id', $_POST['ga_account_id'] );
+			add_option( 'gad_account_id', sanitize_text_field( $_POST['ga_account_id'] ) );
 
 			if ( isset( $_POST['ga_forget_auth'] ) ) {
 				delete_option( 'gad_oauth_token' );
@@ -127,7 +135,7 @@ class GADAdminOptions {
 			if ( isset( $_POST['ga_display_level'] ) ) {
 				delete_option( 'gad_display_level' );
 				if ( $_POST['ga_display_level'] != '' ) {
-					add_option( 'gad_display_level', $_POST['ga_display_level'] );
+					add_option( 'gad_display_level', sanitize_text_field( $_POST['ga_display_level'] ) );
 				}
 			}
 
@@ -140,7 +148,7 @@ class GADAdminOptions {
 			if ( isset( $_POST['ga_cache_timeout'] ) ) {
 				delete_option( 'gad_cache_timeout' );
 				if ( $_POST['ga_cache_timeout'] != '' ) {
-					add_option( 'gad_cache_timeout', $_POST['ga_cache_timeout'] );
+					add_option( 'gad_cache_timeout', sanitize_text_field( $_POST['ga_cache_timeout'] ) );
 				}
 			}
 
@@ -151,25 +159,25 @@ class GADAdminOptions {
 
 			if ( isset( $_POST['ga_goal_one'] ) ) {
 				if ( $_POST['ga_goal_one'] != '' ) {
-					add_option( 'gad_goal_one', $_POST['ga_goal_one'] );
+					add_option( 'gad_goal_one', sanitize_text_field( $_POST['ga_goal_one'] ) );
 				}
 			}
 
 			if ( isset( $_POST['ga_goal_two'] ) ) {
 				if ( $_POST['ga_goal_two'] != '' ) {
-					add_option( 'gad_goal_two', $_POST['ga_goal_two'] );
+					add_option( 'gad_goal_two', sanitize_text_field( $_POST['ga_goal_two'] ) );
 				}
 			}
 
 			if ( isset( $_POST['ga_goal_three'] ) ) {
 				if ( $_POST['ga_goal_three'] != '' ) {
-					add_option( 'gad_goal_three', $_POST['ga_goal_three'] );
+					add_option( 'gad_goal_three', sanitize_text_field( $_POST['ga_goal_three'] ) );
 				}
 			}
 
 			if ( isset( $_POST['ga_goal_four'] ) ) {
 				if ( $_POST['ga_goal_four'] != '' ) {
-					add_option( 'gad_goal_four', $_POST['ga_goal_four'] );
+					add_option( 'gad_goal_four', sanitize_text_field( $_POST['ga_goal_four'] ) );
 				}
 			}
 
@@ -239,19 +247,19 @@ class GADAdminOptions {
 			if ( ! isset( $_POST['ga_pass'] ) || $_POST['ga_pass'] == '' ) {
 				$error_message = "Password is required";
 			} else {
-				add_option( 'gad_login_email', $_POST['ga_email'] );
+				add_option( 'gad_login_email', sanitize_text_field( $_POST['ga_email'] ) );
 
 				if ( isset( $_POST['ga_save_pass'] ) ) {
-					add_option( 'gad_login_pass', $_POST['ga_pass'] );
+					add_option( 'gad_login_pass', sanitize_text_field( $_POST['ga_pass'] ) );
 				} else {
-					delete_option( 'gad_login_pass', $_POST['ga_pass'] );
+					delete_option( 'gad_login_pass', sanitize_text_field( $_POST['ga_pass'] ) );
 				}
 
 				$gauth = new GAuthLib( 'wpga-display-1.0' );
 				if ( isset( $_POST['ga_captcha_token'] ) && isset( $_POST['ga_captcha'] ) ) {
-					$gauth->authenticate( $_POST['ga_email'], $_POST['ga_pass'], get_option( 'gad_services' ), $_POST['ga_captcha_token'], $_POST['ga_captcha'] );
+					$gauth->authenticate( sanitize_text_field( $_POST['ga_email'] ), sanitize_text_field( $_POST['ga_pass'] ), get_option( 'gad_services' ), sanitize_text_field( $_POST['ga_captcha_token'] ), sanitize_text_field( $_POST['ga_captcha'] ) );
 				} else {
-					$gauth->authenticate( $_POST['ga_email'], $_POST['ga_pass'], get_option( 'gad_services' ) );
+					$gauth->authenticate( sanitize_text_field( $_POST['ga_email'] ), sanitize_text_field( $_POST['ga_pass'] ), get_option( 'gad_services' ) );
 				}
 
 				if ( $gauth->isError() ) {
