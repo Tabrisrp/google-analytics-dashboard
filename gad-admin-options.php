@@ -30,9 +30,6 @@ class GADAdminOptions {
 	}
 
 	function __construct() {
-		if( !is_admin() ){
-			die( "Please open this page in the Admin panel only." );
-		}
 	}
 
 	function register_for_actions_and_filters() {
