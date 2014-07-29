@@ -6,6 +6,10 @@ Adds a Google Analytics widget to your Dashboard and more nice features.
 Change log
 ==========
 
+2.1.1
+-----
+ * Small bug fix that prevents a die in the constructor.
+
 2.1
 ---
  * Made the entire plugin i18n compatible.

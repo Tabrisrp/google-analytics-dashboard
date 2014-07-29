@@ -59,6 +59,9 @@ http://sourceforge.net/projects/ister4framework/
 
 == Change Log ==
 
+= 2.1.1 =
+* Small bug fix that prevents a die in the constructor.
+
 = 2.1 =
 * Made the entire plugin i18n compatible.
 * Replace deprecated `update_usermeta` and `get_usermeta` calls.
