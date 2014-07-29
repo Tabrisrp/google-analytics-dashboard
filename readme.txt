@@ -1,19 +1,19 @@
 === Google Analytics Dashboard ===
-Contributors: Carson McDonald, joostdevalk, barrykooij
+Contributors: Carson McDonald, joostdevalk
 Tags: google, analytics, google analytics, dashboard, widget
 Requires at least: 2.8
-Tested up to: 3.4.1
-Stable tag: 2.0.5
+Tested up to: 3.9
+Stable tag: 2.1
 
 This plugin will give you access to your Google Analytics data directly inside your WordPress blog.
 
 == Description ==
 
-[Google Analytics Dashboard](http://www.ioncannon.net/projects/google-analytics-dashboard-wordpress-widget/) gives you the ability to view your Google Analytics data in your Wordpress dashboard. You can also alow other users to see the same dashboard information when they are logged in or embed parts of the data into posts or as part of your theme.
+Google Analytics Dashboard gives you the ability to view your Google Analytics data in your Wordpress dashboard. You can also alow other users to see the same dashboard information when they are logged in or embed parts of the data into posts or as part of your theme.
 
 This plugin does not provide the tracking code for Google Analytics. For that you will need to use a plugin like [Google Analytics for Wordpress](http://wordpress.org/extend/plugins/google-analytics-for-wordpress/ "Google Analytics for Wordpress").
 
-There is a [Google Group](http://groups.google.com/group/gad-wordpress-plugin "Google Group for Google Analytics Dashboard plugin") for this plugin that can be used for questions and feature requests.
+There is a [GitHub Project](https://github.com/Yoast/google-analytics-dashboard/) for this plugin that can be used for bugs and feature requests.
 
 Please note: The Google Analytics API has been changed since the original version of this plugin. If you have problems after upgrading make sure to use the "forget authentication" option in the plugin configuration to re-authorize your account.
 
@@ -58,6 +58,11 @@ default with PHP 5. There is a backport for PHP 4 found here:
 http://sourceforge.net/projects/ister4framework/
 
 == Change Log ==
+
+= 2.1 =
+* Made the entire plugin i18n compatible.
+* Replace deprecated `update_usermeta` and `get_usermeta` calls.
+* Several security fixes.
 
 = 2.0.5 =
 
