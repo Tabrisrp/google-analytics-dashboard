@@ -1,0 +1,331 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Analytics Dashboard\n"
+"POT-Creation-Date: 2014-09-03 13:29+0100\n"
+"PO-Revision-Date: 2014-09-03 15:08+0100\n"
+"Last-Translator: Rémy Perona <remperona@gmail.com>\n"
+"Language-Team: Rémy Perona <remperona@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: /Users/yui/Downloads/google-analytics-dashboard-master/\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: aux-lib.php:64 aux-lib.php:74 aux-lib.php:87 gad-admin-dashboard.php:114
+#, php-format
+msgid "You need to log in and select an account in the %s$1options panel%s$2."
+msgstr ""
+"vous devez vous connecter et sélectionner un compte dans le %1$spanneau "
+"d'options%2$s."
+
+#: aux-lib.php:66 aux-lib.php:76 aux-lib.php:89 gad-admin-dashboard.php:116
+#: gad-admin-pages-posts.php:124
+msgid ""
+"The administrator needs to log in and select a Google Analytics account."
+msgstr ""
+"L'administrateur doit se connecter et sélectionner un compte Google "
+"Analytics."
+
+#: aux-lib.php:102
+msgid "Error gathering analytics data from Google: "
+msgstr "Erreur lors de la collecte des données analytiques depuis Google :"
+
+#: gad-admin-dashboard-ui.php:79
+msgid "Base Stats"
+msgstr "Statistiques de base"
+
+#: gad-admin-dashboard-ui.php:95
+msgid "Visits"
+msgstr "Visites"
+
+#: gad-admin-dashboard-ui.php:100
+msgid "Pageviews"
+msgstr "Pages vues"
+
+#: gad-admin-dashboard-ui.php:105
+msgid "Pages/Visit"
+msgstr "Pages/Visite"
+
+#: gad-admin-dashboard-ui.php:114
+msgid "Bounce Rate"
+msgstr "Taux de rebond"
+
+#: gad-admin-dashboard-ui.php:119
+msgid "Avg. Time on Site"
+msgstr "Temps moy. sur site"
+
+#: gad-admin-dashboard-ui.php:124
+msgid "% New Visits"
+msgstr "% de nouvelles visites"
+
+#: gad-admin-dashboard-ui.php:140
+msgid "Goals"
+msgstr "Objectifs"
+
+#: gad-admin-dashboard-ui.php:186
+msgid "Extended Stats"
+msgstr "Statistiques étendues"
+
+#: gad-admin-dashboard-ui.php:199
+msgid "Top Posts"
+msgstr "Top articles"
+
+#: gad-admin-dashboard-ui.php:219
+msgid "Top Searches"
+msgstr "Top recherche"
+
+#: gad-admin-dashboard-ui.php:240
+msgid "Top Referrers"
+msgstr "Top référents"
+
+#: gad-admin-dashboard.php:60
+msgid "Google Analytics Dashboard Widget"
+msgstr "Widget Tableau de bord Google Analytics"
+
+#: gad-admin-dashboard.php:76
+msgid "Loading&#8230;"
+msgstr "Chargement&#8230;"
+
+#: gad-admin-dashboard.php:76 gad-admin-pages-posts.php:136
+msgid "This widget requires JavaScript."
+msgstr "Ce widget nécessite JavaScript."
+
+#: gad-admin-dashboard.php:87
+msgid "Could not gather Google Analytics data."
+msgstr "Les données Google Analytics n'ont pas pu être collectées."
+
+#: gad-admin-options-ui.php:67
+msgid ""
+"<b>Note:</b> You will need to select an account and <b>click \"Save Changes"
+"\"</b> before the analytics dashboard will work."
+msgstr ""
+"<b>Note :</b> Vous devez sélectionner un compte et <b>cliquer sur "
+"\"Sauvegarder les changements\"</b> avant que le tableau de bord analytics "
+"fonctionne."
+
+#: gad-admin-options-ui.php:81
+msgid "Available Accounts"
+msgstr "Comptes disponibles"
+
+#: gad-admin-options-ui.php:85
+msgid "No accounts available."
+msgstr "Aucun compte disponible."
+
+#: gad-admin-options-ui.php:101
+msgid "Forget Password"
+msgstr "Oublier le mot de passe"
+
+#: gad-admin-options-ui.php:108
+msgid "Forget Authentication"
+msgstr "Oublier l'authentification"
+
+#: gad-admin-options-ui.php:115
+msgid "Forget Everything"
+msgstr "Tout oublier"
+
+#: gad-admin-options-ui.php:121
+msgid "Dashboard Level"
+msgstr "Niveau d'accès au tableau de bord"
+
+#: gad-admin-options-ui.php:128
+msgid "Editor"
+msgstr "Editeur"
+
+#: gad-admin-options-ui.php:129
+msgid "Author"
+msgstr "Auteur"
+
+#: gad-admin-options-ui.php:130
+msgid "Contributor"
+msgstr "Contributeur"
+
+#: gad-admin-options-ui.php:131
+msgid "Subscriber"
+msgstr "Abonné"
+
+#: gad-admin-options-ui.php:141
+msgid "Cache Timeout (seconds)"
+msgstr "Durée du cache (en secondes)"
+
+#: gad-admin-options-ui.php:152
+msgid "The configuration of your server will prevent response caching."
+msgstr ""
+"La configuration de votre serveur empêchera la mise en cache de la réponse."
+
+#: gad-admin-options-ui.php:166
+msgid "Goal #1 Label"
+msgstr "Label objectif #1"
+
+#: gad-admin-options-ui.php:172
+msgid "Goal #2 Label"
+msgstr "Label objectif #2"
+
+#: gad-admin-options-ui.php:178
+msgid "Goal #3 Label"
+msgstr "Label objectif #3"
+
+#: gad-admin-options-ui.php:185
+msgid "Goal #4 Label"
+msgstr "Label objectif #4"
+
+#: gad-admin-options-ui.php:192
+msgid "Disable Post Stats Display"
+msgstr "Désactiver l'affichage des statistiques par article"
+
+#: gad-admin-options-ui.php:201
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: gad-admin-options-ui.php:224
+msgid "Login using Google's OAuth system."
+msgstr "Se connecter en utilisant le système OAuth de Google."
+
+#: gad-admin-options-ui.php:228
+msgid ""
+"This is the prefered method of attaching your Google account.<br/>\n"
+"                Clicking the \"Start the Login Process\" button will "
+"redirect you to a login page at google.com.<br/>\n"
+"                After accepting the login there you will be returned here."
+msgstr ""
+"C'est la méthode préférée pour lier votre compte Google.<br/>\n"
+"                Cliquer sur le bouton \"Démarrer le processus de connexion\" "
+"vous redirigera vers une page de connexion sur google.com.<br/>\n"
+"                Après avoir accepté la connexion, vous serez redirigé ici."
+
+#: gad-admin-options-ui.php:235
+msgid "Start the Login Process &raquo;"
+msgstr "Commencer le processus de connexion &raquo;"
+
+#: gad-admin-options-ui.php:251
+msgid ""
+"You can still use the older authentication system but it is not recommended."
+msgstr ""
+"Vous pouvez toujours utiliser l'ancien système d'authentification mais ce "
+"n'est pas recommandé."
+
+#: gad-admin-options-ui.php:256
+msgid "Google Analytics Email"
+msgstr "Email Google Analytics"
+
+#: gad-admin-options-ui.php:264
+msgid "Google Analytics Password"
+msgstr "Mot de passe Google Analytics"
+
+#: gad-admin-options-ui.php:272
+msgid "Google CAPTCHA"
+msgstr "CAPTCHA Google"
+
+#: gad-admin-options-ui.php:283
+msgid "Save Password"
+msgstr "Sauvegarder le mot de passe"
+
+#: gad-admin-options-ui.php:294
+msgid "Login &raquo;"
+msgstr "Connexion &raquo;"
+
+#: gad-admin-options.php:63
+msgid "Google Analytics Dashboard Options"
+msgstr "Options du tableau de bord Google Analytics"
+
+#: gad-admin-options.php:63
+msgid "Google Analytics Dashboard"
+msgstr "Tableau de bord Google Analytics"
+
+#: gad-admin-options.php:68
+msgid ""
+"It appears that <a href=\"http://us3.php.net/manual/en/book.simplexml.php"
+"\">SimpleXML</a> is not compiled into your version of PHP. It is required "
+"for this plugin to function correctly."
+msgstr ""
+"Il semblerait que <a href=\"http://us3.php.net/manual/en/book.simplexml.php"
+"\">SimpleXML</a> n'est pas compilé dans votre version de PHP. Il est requis "
+"pour que cette extension fonctionne correctement."
+
+#: gad-admin-options.php:71
+msgid ""
+"It appears that <a href=\"http://www.php.net/manual/en/book.curl.php\">CURL</"
+"a> is not compiled into your version of PHP. It is required for this plugin "
+"to function correctly."
+msgstr ""
+"Il semblerait que <a href=\"http://www.php.net/manual/en/book.curl.php"
+"\">CURL</a> n'est pas compilé dans votre version de PHP. Il est requis pour "
+"que cette extension fonctionne correctement."
+
+#: gad-admin-options.php:87 gad-admin-options.php:92 gad-admin-options.php:227
+#: gad-admin-options.php:342
+msgid "Cheatin&#8217; uh?"
+msgstr "Alors, on triche ?"
+
+#: gad-admin-pages-posts-ui.php:48
+msgid "pageviews"
+msgstr "pages vues"
+
+#: gad-admin-pages-posts-ui.php:50
+msgid "exits"
+msgstr "sorties"
+
+#: gad-admin-pages-posts-ui.php:52
+msgid "uniques"
+msgstr "uniques"
+
+#: gad-admin-pages-posts.php:41
+msgid "Analytics"
+msgstr "Analytics"
+
+#: gad-admin-pages-posts.php:122
+#, php-format
+msgid "You need to log in and select an account in the %1$soptions panel%2$s."
+msgstr ""
+"Vous devez être connecté et sélectionner un compte dans le %1$spanneau "
+"d'options%2$s."
+
+#: gauth-lib.php:82
+msgid "The login request is for a username or password that is not recognized."
+msgstr ""
+"La requête de connexion est pour un nom d'utilisateur ou un mot de passe qui "
+"n'est pas reconnu."
+
+#: gauth-lib.php:84
+msgid ""
+"The account email address has not been verified. You will need to access "
+"your Google account directly to resolve this issue."
+msgstr ""
+"L'adresse email du compte n'a pas été vérifiée. Vous devez accéder à votre "
+"compte Google directement pour résoudre ce problème."
+
+#: gauth-lib.php:86
+msgid ""
+"You have not agreed to Google terms. You will need access your Google "
+"account directly to resolve the issue."
+msgstr ""
+"Vous n'avez pas acccepté les termes de Google.Vous devez accéder à votre "
+"compte Google directement pour résoudre ce problème."
+
+#: gauth-lib.php:88
+msgid "A CAPTCHA is required."
+msgstr "Un CAPTCHA est requis."
+
+#: gauth-lib.php:90
+msgid "Unknown error."
+msgstr "Erreur inconnue."
+
+#: gauth-lib.php:92
+msgid "Your Google account has been deleted."
+msgstr "Votre compte Google a été effacé."
+
+#: gauth-lib.php:94
+msgid "Your Google account has been disabled."
+msgstr "Votre compte Google a été désactivé."
+
+#: gauth-lib.php:96
+msgid "Your Google access to the specified service has been disabled."
+msgstr "Votre accès Google à ce service a été désactivé."
+
+#: gauth-lib.php:98
+msgid "The service is not available; try again later."
+msgstr "Le service est indisponible; réessayer plus tard."
